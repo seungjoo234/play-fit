@@ -5,6 +5,16 @@ import {
   Routes,
   useNavigate,
 } from "react-router-dom";
+import {
+  AUTH_PATH,
+  BOARD_DETAIL_PATH,
+  BOARD_PATH,
+  BOARD_UPDATE_PATH,
+  BOARD_WRITE_PATH,
+  MAIN_PATH,
+  SEARCH_PATH,
+  USER_PATH,
+} from "constant";
 import Commu from "./commu";
 import Commu_nav from "./commu-nav";
 import "./style.css";
@@ -16,7 +26,7 @@ export default function Main() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate("/");
+    navigate(BOARD_WRITE_PATH());
   };
 
   return (
