@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { BOARD_WRITE_PATH } from "constant";
 import "./community-fila.css";
 
 const profile = require("../../../assets/image/blank-profile.png");
@@ -11,6 +13,11 @@ const Community_fila = () => {
 
   const handlePageClick = (page: number) => {
     setSelectedPage(page);
+  };
+
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate(BOARD_WRITE_PATH());
   };
 
   return (
@@ -135,7 +142,9 @@ const Community_fila = () => {
             {page}
           </button>
         ))}
-        <button className="write">글쓰기</button>
+        <button onClick={handleButtonClick} className="write">
+          글쓰기
+        </button>
       </div>
     </div>
   );

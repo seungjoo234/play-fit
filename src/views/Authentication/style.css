@@ -37,6 +37,20 @@
   }
 }
 
+#auth-wrapper:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background-image: url("/src/assets/image/auth-bg/auth-background1.png"),
+    url("/src/assets/image/auth-bg/auth-background2.png"),
+    url("/src/assets/image/auth-bg/auth-background3.png"),
+    url("/src/assets/image/auth-bg/auth-background4.png"),
+    url("/src/assets/image/auth-bg/auth-background5.png"),
+    url("/src/assets/image/auth-bg/auth-background6.png");
+}
+
 #auth-wrapper {
   padding: 100px 0px 150px;
   min-width: 1440px;
@@ -285,8 +299,6 @@ label {
 }
 
 input {
-  margin-bottom: 20px;
-  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 30px;
   font-size: 16px;

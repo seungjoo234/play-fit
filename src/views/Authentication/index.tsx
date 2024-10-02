@@ -716,10 +716,16 @@ export default function Authentication() {
     const [activeTab, setActiveTab] = useState<"find-id" | "find-pw">(
       "find-id"
     );
+    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
+    const [verificationCodeId, setVerificationCodeId] = useState("");
+    const [verificationCodePw, setVerificationCodePw] = useState("");
     const [showVerificationInputId, setShowVerificationInputId] =
       useState(false);
     const [showVerificationInputPw, setShowVerificationInputPw] =
       useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [usernameError, setUsernameError] = useState(false);
 
     const onSignInLinkClickHandler = () => {
       setView("sign-in");
@@ -730,13 +736,13 @@ export default function Authentication() {
     };
 
     const handleFindIdSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault(); // 기본 폼 제출 방지
-      setShowVerificationInputId(true); // 인증번호 입력 박스 표시
+      e.preventDefault();
+      setShowVerificationInputId(true);
     };
 
     const handleFindPwSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault(); // 기본 폼 제출 방지
-      setShowVerificationInputPw(true); // 인증번호 입력 박스 표시
+      e.preventDefault();
+      setShowVerificationInputPw(true);
     };
 
     return (
@@ -746,7 +752,8 @@ export default function Authentication() {
             className={`tab-button ${activeTab === "find-id" ? "active" : ""}`}
             onClick={() => {
               setActiveTab("find-id");
-              setShowVerificationInputId(false); // 아이디 찾기 탭으로 전환 시 인증번호 입력 박스 숨기기
+              setShowVerificationInputId(false);
+              setEmail("");
             }}
           >
             아이디 찾기
@@ -755,7 +762,9 @@ export default function Authentication() {
             className={`tab-button ${activeTab === "find-pw" ? "active" : ""}`}
             onClick={() => {
               setActiveTab("find-pw");
-              setShowVerificationInputPw(false); // 비밀번호 찾기 탭으로 전환 시 인증번호 입력 박스 숨기기
+              setShowVerificationInputPw(false);
+              setUsername("");
+              setEmail("");
             }}
           >
             비밀번호 찾기
@@ -763,21 +772,27 @@ export default function Authentication() {
         </div>
         {activeTab === "find-id" && (
           <form className="find-id-form" onSubmit={handleFindIdSubmit}>
-            <label htmlFor="email">이메일 주소:</label>
-            <input
+            <InputBox
+              label="이메일 주소"
               type="email"
-              id="email"
               placeholder="이메일 주소를 입력하세요"
-              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={emailError}
+              message={emailError ? "이메일 주소를 입력하세요." : ""}
+              id="email"
             />
             {showVerificationInputId && (
               <div>
-                <label htmlFor="verification-code-id">인증번호:</label>
-                <input
+                <InputBox
+                  label="인증번호"
                   type="text"
-                  id="verification-code-id"
                   placeholder="인증번호를 입력하세요"
-                  required
+                  value={verificationCodeId}
+                  onChange={(e) => setVerificationCodeId(e.target.value)}
+                  error={false}
+                  message=""
+                  id="verification-code-id"
                 />
               </div>
             )}
@@ -786,28 +801,37 @@ export default function Authentication() {
         )}
         {activeTab === "find-pw" && (
           <form className="find-pw-form" onSubmit={handleFindPwSubmit}>
-            <label htmlFor="username">아이디:</label>
-            <input
+            <InputBox
+              label="아이디"
               type="text"
-              id="username"
               placeholder="아이디를 입력하세요"
-              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              error={usernameError}
+              message={usernameError ? "아이디를 입력하세요." : ""}
+              id="username"
             />
-            <label htmlFor="email">이메일 주소:</label>
-            <input
+            <InputBox
+              label="이메일 주소"
               type="email"
-              id="email"
               placeholder="이메일 주소를 입력하세요"
-              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={emailError}
+              message={emailError ? "이메일 주소를 입력하세요." : ""}
+              id="email"
             />
             {showVerificationInputPw && (
               <div>
-                <label htmlFor="verification-code-pw">인증번호:</label>
-                <input
+                <InputBox
+                  label="인증번호"
                   type="text"
-                  id="verification-code-pw"
                   placeholder="인증번호를 입력하세요"
-                  required
+                  value={verificationCodePw}
+                  onChange={(e) => setVerificationCodePw(e.target.value)}
+                  error={false}
+                  message=""
+                  id="verification-code-pw"
                 />
               </div>
             )}

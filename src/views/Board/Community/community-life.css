@@ -177,6 +177,7 @@
   /* 버튼을 중앙에 정렬 */
   margin-top: 20px;
   /* 리스트와 버튼 사이의 간격 */
+  margin-bottom: 20px;
   position: relative;
 }
 

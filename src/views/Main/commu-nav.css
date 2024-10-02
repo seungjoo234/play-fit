@@ -4,7 +4,8 @@
   align-items: stretch;
   /* background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(85, 85, 85)); */
   background-color: white;
-  padding: 50px;
+  margin: 0;
+  padding: 0 50px;
   /* 이미지 사이 간격을 위해 패딩 추가 */
   gap: 20px;
   /* 각 카드 사이에 간격 추가 */

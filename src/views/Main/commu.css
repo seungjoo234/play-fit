@@ -1,5 +1,7 @@
 .community {
   margin: 0;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
   padding: 0;
   /* background-image: linear-gradient(to top, white, rgb(85, 85, 85)); */
   background-color: white;
