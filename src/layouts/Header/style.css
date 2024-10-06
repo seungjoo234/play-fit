@@ -1,7 +1,6 @@
 @font-face {
   font-family: "GimhaeGayaR";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimhaeGayaR.woff")
-    format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimhaeGayaR.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -74,7 +73,6 @@
   background: none;
   outline: none;
   padding: 0;
-  margin-top: 22px;
 
   color: rgba(0, 0, 0, 1);
 

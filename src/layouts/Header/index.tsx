@@ -14,6 +14,10 @@ import {
   BOARD_UPDATE_PATH,
   BOARD_WRITE_PATH,
   MAIN_PATH,
+  LIFE_PATH,
+  HEALTH_PATH,
+  FILA_PATH,
+  SPORTS_PATH,
   SEARCH_PATH,
   USER_PATH,
 } from "constant";
@@ -39,6 +43,14 @@ export default function Header() {
   const [isAuthPage, setAuthPage] = useState<boolean>(false);
   // state: 메인 페이지 상태 //
   const [isMainPage, setMainPage] = useState<boolean>(false);
+  // state: 일상커뮤 페이지 상태 //
+  const [isLifePage, setLifePage] = useState<boolean>(false);
+  // state: 헬스커뮤 페이지 상태 //
+  const [isHealthPage, setHealthPage] = useState<boolean>(false);
+  // state: 필라커뮤 페이지 상태 //
+  const [isFilaPage, setFilaPage] = useState<boolean>(false);
+  // state: 스포츠커뮤 페이지 상태 //
+  const [isSportsPage, setSportsPage] = useState<boolean>(false);
   // state: 검색 페이지 상태 //
   const [isSearchPage, setSearchPage] = useState<boolean>(false);
   // state: 게시물 상세 페이지 상태 //
@@ -234,6 +246,14 @@ export default function Header() {
     setAuthPage(isAuthPage);
     const isMainPage = pathname === MAIN_PATH();
     setMainPage(isMainPage);
+    const isLifePage = pathname === LIFE_PATH();
+    setLifePage(isLifePage);
+    const isHealthPage = pathname === HEALTH_PATH();
+    setHealthPage(isHealthPage);
+    const isFilaPage = pathname === FILA_PATH();
+    setFilaPage(isFilaPage);
+    const isSportsPage = pathname === SPORTS_PATH();
+    setSportsPage(isSportsPage);
     const isSearchPage = pathname.startsWith(SEARCH_PATH(""));
     setSearchPage(isSearchPage);
     const isBoardDetailPage = pathname.startsWith(
@@ -267,10 +287,10 @@ export default function Header() {
           <div className="header-logo">{"PlayFit"}</div>
         </div>
         <div className="header-right-box">
-          {(isAuthPage || isMainPage || isSearchPage || isBoardDetailPage) && (
+          {(isAuthPage || isMainPage || isLifePage || isFilaPage || isHealthPage || isSportsPage || isSearchPage || isBoardDetailPage) && (
             <SearchButton />
           )}
-          {(isMainPage || isSearchPage || isBoardDetailPage || isUserPage) && (
+          {(isMainPage || isLifePage || isFilaPage || isHealthPage || isSportsPage || isSearchPage || isBoardDetailPage || isUserPage) && (
             <MyPageButton />
           )}
           {(isBoardWritePage || isBoardUpdatePage) && <UploadButton />}
