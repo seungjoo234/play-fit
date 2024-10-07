@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { BOARD_WRITE_PATH } from "constant";
 import "./community-life.css";
 
@@ -40,97 +40,109 @@ const Community_life = () => {
         </a>
       </div>
       <div className="card-container">
-        <div className="card">
-          <img src={bg} className="bgimg" />
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <img src={bg} className="bgimg" />
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>안녕하세요</h1>
+            <p>ㅁ너ㅏㅁㄴ러ㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-          <h1>안녕하세요</h1>
-          <p>ㅁ너ㅏㅁㄴ러ㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
+        </Link>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>반갑습니다!</h1>
+            <p>ㅁㅁㄴㅇㅁㄴㅇ</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
+        </Link>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>필라테스 정보</h1>
+            <p>ㅁㅁㄴㅇㄴㅁㅇㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-          <h1>반갑습니다!</h1>
-          <p>ㅁㅁㄴㅇㅁㄴㅇ</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
+        </Link>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>헬스 정보</h1>
+            <p>ㅁ너ㅏㅁㄴ러ㅏㅣㄷ가히ㅏㅎ디아너맒</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
+        </Link>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>헬스 정보</h1>
+            <p>asdasdsdada러ㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-          <h1>필라테스 정보</h1>
-          <p>ㅁㅁㄴㅇㄴㅁㅇㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
+        </Link>
+        <Link to="/detail" className="link">
+          <div className="card">
+            <div className="profile">
+              <img src={profile} />
+              <h3>에디</h3>
+              <p>2024-09-22 04:10</p>
+            </div>
+            <h1>헬스 정보</h1>
+            <p>asfafasfsdddsadsadasd</p>
+            <div className="right-items">
+              <img src={heart} />
+              <p>0</p>
+              <img src={comment} />
+              <p>0</p>
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
-          </div>
-          <h1>헬스 정보</h1>
-          <p>ㅁ너ㅏㅁㄴ러ㅏㅣㄷ가히ㅏㅎ디아너맒</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
-          </div>
-          <h1>헬스 정보</h1>
-          <p>asdasdsdada러ㅏㅁㄴ렘ㄴㄴㅁ아너맒</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="profile">
-            <img src={profile} />
-            <h3>에디</h3>
-            <p>2024-09-22 04:10</p>
-          </div>
-          <h1>헬스 정보</h1>
-          <p>asfafasfsdddsadsadasd</p>
-          <div className="right-items">
-            <img src={heart} />
-            <p>0</p>
-            <img src={comment} />
-            <p>0</p>
-          </div>
-        </div>
+        </Link>
       </div>
       <div className="pagination">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((page) => (

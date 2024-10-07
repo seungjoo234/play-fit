@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "MaplestoryOTFBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "MaplestoryOTFBold", sans-serif;
 }
 
 html,
@@ -29,6 +38,7 @@ body {
   text-align: center;
   flex-direction: column;
   background-color: black;
+  font-family: "MaplestoryOTFBold", sans-serif;
 }
 
 .main::before {
