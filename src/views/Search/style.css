@@ -1,0 +1,81 @@
+.search-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 페이지 중앙 정렬 */
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap; /* 여러 줄로 배치 가능 */
+  justify-content: space-between; /* 양 끝에 정렬 */
+  max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.result-card {
+  position: relative; /* 자식 요소의 절대 위치 지정을 위해 */
+  background-color: rgba(255, 255, 255, 0.9); /* 기본 배경색 */
+  border: 2px solid rgba(173, 173, 173, 0.7); /* 테두리 두께를 더 두껍게 설정 */
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 15px;
+  width: calc(50% - 20px); /* 한 줄에 두 개 보이도록 너비 설정 */
+  height: 200px; /* 세로 길이 */
+  overflow: hidden; /* 자식 요소가 카드 크기를 넘지 않도록 */
+  margin-bottom: 20px; /* 아래쪽 여백 추가 */
+  transition: background-color 0.3s; /* 배경색 변화에 부드러운 애니메이션 */
+  display: flex; /* 카드 내의 내용을 수직 정렬하기 위해 flex 사용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+}
+
+.result-card:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* 마우스 오버 시 배경색 변화 */
+  cursor: pointer;
+}
+
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 카드에 맞게 잘림 */
+  opacity: 0.5; /* 배경 느낌을 주기 위한 투명도 조절 */
+  z-index: 0; /* 배경 이미지가 카드의 뒤에 위치 */
+}
+
+.card-content {
+  position: relative; /* 텍스트가 배경 이미지 위에 표시되도록 */
+  z-index: 1; /* 텍스트가 배경 이미지 위에 위치하도록 설정 */
+  flex-grow: 1; /* 카드 내용이 가용 공간을 모두 차지하도록 설정 */
+}
+
+.pro-pic {
+  display: flex;
+  align-items: center; /* 사용자 프로필과 이름을 수평 정렬 */
+}
+
+.profile-pic {
+  width: 40px; /* 프로필 사진 크기 */
+  height: 40px; /* 프로필 사진 높이 */
+  border-radius: 50%; /* 프로필 사진을 원형으로 만들기 */
+  margin-right: 10px; /* 이름과 프로필 사진 사이의 간격 */
+}
+
+.user-info {
+  margin: 0; /* 사용자 정보 마진 제거 */
+}
+
+.right-items {
+  display: flex;
+  align-items: center; /* 아이콘과 숫자를 수평 정렬 */
+  margin-top: auto; /* 상단 여백을 자동으로 설정하여 아래로 밀어내기 */
+  position: absolute; /* 절대 위치로 설정 */
+  bottom: 10px; /* 카드 하단에서 10px 위로 설정 */
+  right: 10px; /* 카드 오른쪽에서 10px 위로 설정 */
+}
+
+.icon-icon {
+  width: 20px; /* 아이콘 너비 */
+  height: 20px; /* 아이콘 높이 */
+  margin-left: 10px; /* 아이콘과 숫자 사이 간격 */
+}
